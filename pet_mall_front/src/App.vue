@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1 v-text="msg" ref="title"></h1>
+    <button @click="showDOM">点我输出上方dom</button>
+    <School/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import School from './components/School.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  data(){
+    return {
+      msg: "欢迎学习vue"
+    }
+  },
+  methods:{
+    showDOM(){
+      console.log(this.$refs.title)
+
+    }
+  },
+  components:{School}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
