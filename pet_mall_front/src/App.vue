@@ -2,6 +2,9 @@
   <div>
     <h1 v-text="msg" ref="title"></h1>
     <button @click="showDOM">点我输出上方dom</button>
+    <School name="李四" :address="123"/>
+    <School/>
+    <School/>
     <School/>
   </div>
 </template>
@@ -18,7 +21,6 @@ export default {
   methods:{
     showDOM(){
       console.log(this.$refs.title)
-
     }
   },
   components:{School}
