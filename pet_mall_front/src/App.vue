@@ -1,16 +1,17 @@
 <template>
-  <div>
-    <h1 v-text="msg" ref="title"></h1>
+  <div class="demo">
+    <h4 class="qwe" v-text="msg" ref="title"></h4>
     <button @click="showDOM">点我输出上方dom</button>
     <School name="李四" :address="123"/>
     <School/>
-    <School/>
+    <Student/>
     <School/>
   </div>
 </template>
 
 <script>
 import School from './components/School.vue'
+import Student from './components/Student.vue'
 export default {
   name: 'App',
   data(){
@@ -23,10 +24,15 @@ export default {
       console.log(this.$refs.title)
     }
   },
-  components:{School}
+  components:{School,Student}
 }
 </script>
 
-<style>
-
+<style lang="less">
+  .demo{
+    background-color: pink;
+    .qwe{
+      font-size: 40px;
+    }
+  }
 </style>

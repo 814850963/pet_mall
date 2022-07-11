@@ -27,16 +27,12 @@ export default {
       required:true,
       default:"123321"
     },
-    address: {
-      type:Number,
-      default:99
-    }
   },
 }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
   .school{
-    background-color: gray;
+    background-color: orange;
   }
 </style>
